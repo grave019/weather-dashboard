@@ -118,3 +118,9 @@ function searchHistoryBtn() {
     }
 }
 
+$("#historyButtons").on("click", function (event) {
+    getInitialData(event.target.textContent)
+})
+
+searchBtnEl.addEventListener('click', formSubmitHandler)
+
