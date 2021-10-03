@@ -64,3 +64,19 @@ var getMainData = function (lat, log, cityName) {
             humidMainEl.innerHTML = `Humidity: ${data.current.humidity} %`
             uvMainEl.innerHTML = `UV Index: <span class = "color">      ${data.current.uvi}     </span>`
             $(".main").addClass("mainDisplay")
+
+            //colors for the different UV numbers
+
+            if (data.current.uvi <= 2) {
+                $(".color").addClass("green");
+                $(".color").removeClass("yellow");
+                $(".color").removeClass("red");
+            } else if (data.current.uvi < 5) {
+                colorBlock.classList.add("yellow");
+                colorBlock.classList.remove("green");
+                colorBlock.classList.remove("red");
+            } else {
+                colorBlock.classList.add("red");
+                colorBlock.classList.remove("yellow");
+                colorBlock.classList.remove("green");
+            }
