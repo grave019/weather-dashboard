@@ -1,3 +1,4 @@
+var APIKey = "3a86af078e820c30e7a3322768448284";
 //dom element refs
 var searchBtnEl = document.getElementById("searchBtn")
 var searchCityEl = document.getElementById("searchCity")
@@ -30,9 +31,22 @@ var formSubmitHandler = function (event) {
         searchCityEl.value = "";
         history(cityName);
     } else {
-        alert("Please enter a valid city!");
+        alert("Please enter a valid city");
     }
 };
-
-
-var APIKey = "3a86af078e820c30e7a3322768448284";
+//initial API request
+var getInitialData = function (cityName) {
+    let firstApi = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&appid=3a86af078e820c30e7a3322768448284`;
+    fetch(firstApi).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (data) {
+                let log = data[0].lon;
+                let lat = data[0].lat;
+                console.log(lat, log)
+                getMainData(lat, log, cityName)
+            });
+        } else {
+            alert('There was some error, enter the city again');
+        }
+    });
+};
