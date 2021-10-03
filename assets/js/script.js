@@ -20,4 +20,19 @@ let appDate = function (time) {
     return mm + '/' + dd + '/' + y;
 }
 
+var formSubmitHandler = function (event) {
+    event.preventDefault();
+
+    // get value from input element
+    var cityName = searchCityEl.value.trim();
+    if (cityName) {
+        getInitialData(cityName);
+        searchCityEl.value = "";
+        history(cityName);
+    } else {
+        alert("Please enter a valid city!");
+    }
+};
+
+
 var APIKey = "3a86af078e820c30e7a3322768448284";
