@@ -94,5 +94,15 @@ var getMainData = function (lat, log, cityName) {
             }
         });
 }
+//adds list of cities to local storage
+function history(cityName) {
+    $("#historyButtons").empty();
+    let savedCity = localStorage.getItem("cities")
+    let cityConditional = savedCity ? JSON.parse(savedCity) : [];
+    let currentCity = { cities: cityName }
+    cityConditional.push(currentCity);
+    localStorage.setItem("cities", JSON.stringify(cityConditional))
+    searchHistoryBtn()
+}
 
 
