@@ -94,7 +94,7 @@ var getMainData = function (lat, log, cityName) {
             }
         });
 }
-//adds list of cities to local storage
+
 function history(cityName) {
     $("#historyButtons").empty();
     let savedCity = localStorage.getItem("cities")
@@ -105,4 +105,16 @@ function history(cityName) {
     searchHistoryBtn()
 }
 
+function searchHistoryBtn() {
+    let cityList = localStorage.getItem("cities")
+    listConditional = cityList ? JSON.parse(cityList) : []
+    console.log("listConditional")
+    for (let i = 0; i < listConditional.length; i++) {
+        let historyBtn = document.createElement("button")
+        historyBtn.setAttribute("data", (listConditional[i].cities))
+        historyBtn.classList.add("buttons")
+        historyBtn.textContent = (listConditional[i].cities)
+        $("#historyButtons").append(historyBtn);
+    }
+}
 
