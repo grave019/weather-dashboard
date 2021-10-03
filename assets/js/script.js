@@ -50,3 +50,17 @@ var getInitialData = function (cityName) {
         }
     });
 };
+var getMainData = function (lat, log, cityName) {
+    let secondApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${log}&appid=3a86af078e820c30e7a3322768448284`;
+    fetch(secondApi)
+        .then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            console.log(data);
+
+            boldDataEl.innerHTML = `<span class = "bold">${cityName}    (${appDate(data.current.dt)})  </span>   <img src="https://openweathermap.org/img/w/${data.current.weather[0].icon}.png" /> `
+            tempMainEl.innerHTML = `Temp: ${data.current.temp} &#186F`
+            windMainEl.innerHTML = `Wind: ${data.current.wind_speed} MPH`
+            humidMainEl.innerHTML = `Humidity: ${data.current.humidity} %`
+            uvMainEl.innerHTML = `UV Index: <span class = "color">      ${data.current.uvi}     </span>`
+            $(".main").addClass("mainDisplay")
