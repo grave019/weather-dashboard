@@ -22,4 +22,6 @@ When a city is searched current and future conditions are given for that city. T
 
 ### 3. Reflection
 
-The skills learned in this exercise are vital to being able to manipulate a large data source and pull the material that is needed to pull from other API's. This is a vital skill for any web developer. I plan on designing other apps with API's to provide functionality from the data in these resources. 
+The skills learned in this exercise are vital to being able to manipulate a large data source and pull the material that is needed to pull from other API's. This is a vital skill for any web developer. I plan on designing other apps with API's to provide functionality from the data in these resources and use it to make something useful. This is an important skill in today's marketplace. I look forward to honing my skills and getting better in the future.
+
+### 4.
