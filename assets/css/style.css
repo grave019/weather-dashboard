@@ -32,3 +32,8 @@ header {
     width: 100%;
     border-radius: 8px;
 }
+.mainDisplay{
+    border: solid 5px black;
+    margin: 25px;
+    padding: 15px;
+}
