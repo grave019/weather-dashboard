@@ -51,7 +51,7 @@ var getInitialData = function (cityName) {
     });
 };
 var getMainData = function (lat, log, cityName) {
-    let secondApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${log}&appid=3a86af078e820c30e7a3322768448284`;
+    let secondApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${log}&exclude=hourly,minutely&units=imperial&appid=3a86af078e820c30e7a3322768448284`;
     fetch(secondApi)
         .then(function (response) {
             return response.json();
