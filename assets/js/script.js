@@ -71,14 +71,14 @@ var getMainData = function (lat, log, cityName) {
                 $(".color").addClass("green");
                 $(".color").removeClass("yellow");
                 $(".color").removeClass("red");
-            } else if (data.current.uvi < 5) {
-                colorBlock.classList.add("yellow");
-                colorBlock.classList.remove("green");
-                colorBlock.classList.remove("red");
+            } else if (data.current.uvi > 5) {
+                $(".color").addClass("red");
+                $(".color").removeClass("yellow");
+                $(".color").removeClass("green");
             } else {
-                colorBlock.classList.add("red");
-                colorBlock.classList.remove("yellow");
-                colorBlock.classList.remove("green");
+                $(".color").addClass("yellow");
+                $(".color").removeClass("green");
+                $(".color").removeClass("red");
             }
             $(forcastBlock).empty()
             for (let i = 1; i < 6; i++) {

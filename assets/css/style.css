@@ -18,15 +18,15 @@ header {
 
 .green{
     background-color: green;
-    color: white;
+    color: rgba(255, 255, 255, 0.925);
   }
 .yellow{
-    background-color: yellow;
-    color: white;
+    background-color: rgb(211, 211, 64);
+    color: rgba(255, 255, 255, 0.918);
   }
 .red{
     background-color: red;
-    color: white;
+    color: rgba(255, 255, 255, 0.932);
   }
 #searchBtn,.buttons{
     width: 100%;
