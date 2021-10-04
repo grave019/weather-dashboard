@@ -11,7 +11,7 @@ header {
     justify-content: space-between;
 }
 .fBlock{
-    background-color: grey;
+    background-color: rgb(81, 78, 95);
     color: white;
     margin: 10px;
 }
@@ -20,11 +20,15 @@ header {
     background-color: green;
     color: white;
   }
-  .yellow{
+.yellow{
     background-color: yellow;
     color: white;
   }
-  .red{
+.red{
     background-color: red;
     color: white;
   }
+  #searchBtn,.buttons{
+    width: 100%;
+    border-radius: 8px;
+}
