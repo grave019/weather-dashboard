@@ -1,0 +1,30 @@
+header {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#4169e1, #8641E1);
+    padding: 15px;
+    color: aliceblue;
+    margin-bottom: 15px;
+}
+
+#forcast{
+    justify-content: space-between;
+}
+.fBlock{
+    background-color: grey;
+    color: white;
+    margin: 10px;
+}
+
+.green{
+    background-color: green;
+    color: white;
+  }
+  .yellow{
+    background-color: yellow;
+    color: white;
+  }
+  .red{
+    background-color: red;
+    color: white;
+  }
