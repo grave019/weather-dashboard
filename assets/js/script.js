@@ -46,7 +46,7 @@ var getInitialData = function (cityName) {
                 getMainData(lat, log, cityName)
             });
         } else {
-            alert('There was some error, enter the city again');
+            alert('There was an error, Please enter the city again');
         }
     });
 };
@@ -80,6 +80,7 @@ var getMainData = function (lat, log, cityName) {
                 $(".color").removeClass("green");
                 $(".color").removeClass("red");
             }
+           // 5 day forecast block 
             $(forcastBlock).empty()
             for (let i = 1; i < 6; i++) {
                 let forcastBlock = document.createElement("div")
@@ -94,6 +95,8 @@ var getMainData = function (lat, log, cityName) {
             }
         });
 }
+
+
 
 function history(cityName) {
     $("#historyButtons").empty();
@@ -117,6 +120,7 @@ function searchHistoryBtn() {
         $("#historyButtons").append(historyBtn);
     }
 }
+
 
 $("#historyButtons").on("click", function (event) {
     getInitialData(event.target.textContent)
