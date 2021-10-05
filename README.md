@@ -26,3 +26,6 @@ The skills learned in this exercise are vital to being able to manipulate a larg
 
 ### 4. Images of the Page Deployed
 
+The image below is the mockup used for duplication.
+
+[png of mockup](assets/images/06-server-side-apis-homework-demo.png)
